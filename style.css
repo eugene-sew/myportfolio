@@ -1,6 +1,12 @@
 body{
     margin: 0%;
     padding: 0%;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 nav{
@@ -57,10 +63,120 @@ nav{
 }
 /* this is for the main content */
 .content{
-    margin: 5%;
+    margin:0px;
 }
-.header{
+.intro{
+    background-image: url(./images/BG.png);
+    background-size: cover;
+    height:700px;
+    padding: 0px 0px 0px 20px;
+    
+}
+
+.intro img{
+    width:450px;
+    height: 580px;
+    position: absolute;
+    left: 45%;
+    padding-top:100px;     
+}
+
+.intro div{
+    position: absolute;
+    top:35%;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+
+
+.text{
+    font-size: 50px;
+    font-weight: bold;
+    margin-left:40px;
+}
+
+.hello{
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.title{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+button{
+    width: 150px;
+    height: 55px;
+    border-radius:5px;
+    border: 0px;
+
+}
+
+.btn-project{
+    background-color:rgb(204, 204, 204);
+    padding: 0%;
+}
+
+
+.btn-project a{
+    color: black;
+    font-size: 20px;
+    position: relative;
+}
+
+.btn-contact{
+    background-color:rgb(144, 177, 248);
+    padding: 0%;
+}
+
+.btn-contact a{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: relative;
+}
+
+button:hover{
+    background-color: rgb(192, 230, 240);
+    transform:scale(1.2);
+    transition: transform 0.5s ease-in; 
+    
+}
+
+.about{
+    background-color:#ededed;
+    padding: 10px;
+}
+.about-card{
+    background-color: #fff;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 10px;
+    display: flex;
+    min-width: 700px;
+
+}
+
+.image-box img{
+    width: 250px;
+    height: 270px;
+}
+
+.about-text-box{
+    margin: 10px;
+    padding: 0px 40px 0px 40px;
+}
+.about-text-box h3{
     text-transform: uppercase;
+}
+.about-text-box h4{
+    font-weight: lighter;
+}
+
+.projects div{
+    margin: 20px;
 }
 
 .projects h3{
@@ -141,5 +257,18 @@ nav{
         width:500px;
         height:300px;
         
+    }
+
+    .intro img{
+        display:none;
+    }
+
+    .image-box img{
+        display: none;
+    }
+
+    .about-card{
+        min-width: 200px;
+        padding: 0%;
     }
 }
