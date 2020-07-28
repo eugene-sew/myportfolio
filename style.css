@@ -1,8 +1,9 @@
-body {
-  margin: 0%;
-  padding: 0%;
-  font-family: sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
 
 a {
   text-decoration: none;
@@ -11,23 +12,28 @@ a {
 
 nav {
   display: flex;
-  background-color: #000;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
+  background-color: rgb(80, 94, 141);
+  font-family: "Poppins", sans-serif;
 }
 
-.logo{
-    display: flex;
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  display: flex;
+  margin-bottom:30px;
 }
 
 #logo-text {
   color: white;
   letter-spacing: 10px;
-  font-size:40px;
+  font-size: 40px;
   text-transform: uppercase;
-  margin: 20px;
-  
+  margin: 20px 0px 0px 20px;
 }
 
 #nav-logo {
@@ -38,30 +44,150 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 50%;
+  width: 40%;
 }
 
 .nav-links li {
-  list-style: none;
+  list-style-type: none;
 }
 
 .nav-links a {
+  color: rgb(226, 226, 226);
   text-decoration: none;
-  color: white;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-style: 14px;
 }
 
 .burger div {
-  width: 40px;
+  width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: rgb(226, 226, 226);
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
 .burger {
   display: none;
   cursor: pointer;
 }
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  /* test it with: body{
+        display:none;
+    } */
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* WHAT SHOULD HAPPEN TO THE NAV-LINKS WHEN WE GET TO MOBILE */
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(80, 94, 141);       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  /* i want the nav bar lists not to show, so that when we click on the burger icon it slowly fades in */
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .intro{
+    margin-bottom: 40px;
+
+  }
+
+  button{
+    margin-top:120px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .cards li img {
+    width: 500px;
+    height: 300px;
+  }
+
+  .intro img {
+    display: none;
+  }
+
+  .image-box img {
+    display: none;
+  }
+
+  .about-card {
+    min-width: 300px;
+    padding: 0%;
+  }
+}
+/* add image as logo */
+#nav-logo {
+  /* float: left; */
+  width: 70px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top:10px;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+/* now what we have to do is to animate the list into the humburger menu
+...so lets build an animation
+*/
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* this is the last code to add. After all is said and done */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
 /* this is for the main content */
 .content {
   margin: 0px;
@@ -211,53 +337,5 @@ button:hover {
   margin: 20px;
 }
 
-/* this is for mobile view */
 
-@media screen and (max-width: 760px) {
-  body {
-    overflow-x: hidden;
-  }
 
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 100%;
-    top: 8vh;
-    background-color: #000;
-    /* opacity:80%; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.2s ease-in;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cards li img {
-    width: 500px;
-    height: 300px;
-  }
-
-  .intro img {
-    display: none;
-  }
-
-  .image-box img {
-    display: none;
-  }
-
-  .about-card {
-    min-width: 200px;
-    padding: 0%;
-  }
-}
