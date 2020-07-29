@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Study Notes</title>
+    <!-- I used Internal CSS styling -->
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .all {
+        margin: 40px 90px 0px 90px;
+      }
+
+      header {
+        margin: 0px 20px 0px 20px;
+        text-align: center;
+      }
+      .date {
+        background-color: rgb(70, 69, 69);
+        color: white;
+        font-size: larger;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        border-radius: 7px;
+        outline: none;
+        font-size: 15px;
+        margin: auto;
+        margin-top: 20px;
+        transition: 0.4s;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .date:hover {
+        transform: scale(1.1);
+      }
+
+      .date:after {
+        content: "\1F447";
+        margin-left: 80%;
+      }
+
+      .active:after {
+        content: "\1F446";
+      }
+
+      .notes {
+        background-color: rgb(116, 115, 115);
+        color: white;
+        font-size: large;
+        padding: 0px 18px;
+        margin-top: 10px;
+        max-height: 0px;
+        transition: 0.4s;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      @media screen and (max-width: 768px) {
+        .all {
+          margin: 20px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img id="nav-logo" src="./images/logo.png" alt="siteLogo" />
+        <h4 id="logo-text">
+          logo
+        </h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="https://github.com/eugene-sew">PROJECT</a></li>
+        <li><a href="./assignment.html">ASSIGNMENT</a></li>
+        <li><a href="./notes.html">NOTES</a></li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="all">
+      <header>
+        <h2>My Notes</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rem
+          impedit provident quidem cumque nulla hic iure iusto asperiores fugit?
+        </p>
+      </header>
+
+      <button class="date">
+        Day 1 <br />
+        date is here
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          sequi ad doloribus qui omnis hic autem doloremque nam ab unde
+          perferendis laudantium vel illum, magnam corporis minima rem quidem
+          nisi nostrum quis quia voluptatum pariatur distinctio reprehenderit? A
+          sit aut, velit omnis, blanditiis dolor quos, suscipit magni veniam
+          quisquam error.
+        </p>
+      </div>
+
+      <button class="date">
+        Day 2 <br />
+        date is here
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          sequi ad doloribus qui omnis hic autem doloremque nam ab unde
+          perferendis laudantium vel illum, magnam corporis minima rem quidem
+          nisi nostrum quis quia voluptatum pariatur distinctio reprehenderit? A
+          sit aut, velit omnis, blanditiis dolor quos, suscipit magni veniam
+          quisquam error.
+        </p>
+      </div>
+
+      <button class="date">
+        Day 3 <br />
+        date is here
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          sequi ad doloribus qui omnis hic autem doloremque nam ab unde
+          perferendis laudantium vel illum, magnam corporis minima rem quidem
+          nisi nostrum quis quia voluptatum pariatur distinctio reprehenderit? A
+          sit aut, velit omnis, blanditiis dolor quos, suscipit magni veniam
+          quisquam error.
+        </p>
+      </div>
+
+      <button class="date">
+        Day 4 <br />
+        date is here
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          sequi ad doloribus qui omnis hic autem doloremque nam ab unde
+          perferendis laudantium vel illum, magnam corporis minima rem quidem
+          nisi nostrum quis quia voluptatum pariatur distinctio reprehenderit? A
+          sit aut, velit omnis, blanditiis dolor quos, suscipit magni veniam
+          quisquam error.
+        </p>
+      </div>
+
+      <button class="date">
+        Day 5 <br />
+        date is here
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          sequi ad doloribus qui omnis hic autem doloremque nam ab unde
+          perferendis laudantium vel illum, magnam corporis minima rem quidem
+          nisi nostrum quis quia voluptatum pariatur distinctio reprehenderit? A
+          sit aut, velit omnis, blanditiis dolor quos, suscipit magni veniam
+          quisquam error.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("date");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>
