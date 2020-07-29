@@ -1,0 +1,35 @@
+body {
+  margin: 10px 0px 0px 0px;
+  padding:0px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 30px;
+}
+ul li button {
+  border: none;
+  background-color: black;
+  padding: 10px;
+  height: 50px;
+  border-radius: 20px 0px 20px 0px;
+}
+
+ul li button:hover {
+  border-radius: 0px 20px 0px 20px;
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+

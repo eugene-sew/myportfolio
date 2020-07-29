@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 a {
   text-decoration: none;
   color: white;
@@ -15,7 +14,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: rgb(80, 94, 141);
+  background-color: black;
   font-family: "Poppins", sans-serif;
 }
 
@@ -25,7 +24,7 @@ nav {
   letter-spacing: 5px;
   font-size: 20px;
   display: flex;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
 #logo-text {
@@ -93,9 +92,9 @@ nav {
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 90vh;
     top: 8vh;
-    background-color: rgb(80, 94, 141);       
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,20 +111,24 @@ nav {
     display: block;
   }
 
-  .intro{
+  .intro {
     margin-bottom: 40px;
-
   }
 
-  button{
-    margin-top:120px;
+  button {
+    margin-top: 120px;
   }
+
+  .about-text-box {
+    max-width: 700px;
+    min-width: 100px;
+  }
+
   .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
 
   .cards li img {
     width: 500px;
@@ -141,8 +144,8 @@ nav {
   }
 
   .about-card {
-    min-width: 300px;
-    padding: 0%;
+    width: 200px;
+    padding: 0px;
   }
 }
 /* add image as logo */
@@ -151,7 +154,7 @@ nav {
   width: 70px;
   height: 40px;
   margin-right: 10px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .nav-active {
@@ -186,7 +189,6 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-
 
 /* this is for the main content */
 .content {
@@ -336,6 +338,3 @@ button:hover {
 .card-content {
   margin: 20px;
 }
-
-
-
