@@ -27,7 +27,7 @@ function createCards() {
   cardsData.forEach((data, index) => createCard(data, index));
 }
 
-//function tom create a single card
+//function to create a single card
 function createCard(data, index) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -78,7 +78,7 @@ createCards();
 
 //event listeners
 
-//next button
+// next button
 nextBtn.addEventListener("click", () => {
   cardsE1[currentActiveCard].className = "card left";
 
@@ -88,9 +88,22 @@ nextBtn.addEventListener("click", () => {
     currentActiveCard = cardsE1.length - 1;
   }
 
-  cardsE1(currentActiveCard).className = "card active";
+  cardsE1[currentActiveCard].className = "card active";
   updateCurrentText();
 });
+
+// nextBtn.addEventListener("click", () => {
+//   cardsE1[currentActiveCard].className = "card left";
+
+//   currentActiveCard = currentActiveCard + 1;
+
+//   if (currentActiveCard > cardsE1.length - 1) {
+//     currentActiveCard = cardsE1.length - 1;
+//   }
+
+//   cardsE1[currentActiveCard].className = "card active";
+//   updateCurrentText();
+// });
 
 //previous button
 prevBtn.addEventListener("click", () => {
@@ -133,7 +146,8 @@ addCardBtn.addEventListener("click", () => {
 //clear card button
 
 clearBtn.addEventListener("click", () => {
-  localStorage.clear;
+  localStorage.clear();
   cardsContainer.innerHTML = "";
   window.location.reload();
 });
+

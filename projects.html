@@ -3,19 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>My Projects</title>
+    <style>
+      .main-content {
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .heading,
+      .project-list {
+        text-transform: uppercase;
+      }
+      .heading {
+        font-size: 2rem;
+        margin-top: 50px;
+      }
+
+      ol {
+        margin: 30px;
+        list-style: none;
+      }
+      ol li {
+        margin-top: 20px;
+        padding: 10px;
+      }
+
+      .project-list {
+        text-decoration: none;
+        color: black;
+        background-color: cornflowerblue;
+
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    </style>
   </head>
   <body>
-    <p>
-      my Projects
-    </p>
+    <nav>
+      <div class="logo">
+        <img id="nav-logo" src="./images/logo.png" alt="siteLogo" />
+        <h4 id="logo-text">
+          logo
+        </h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="./projects.html">PROJECT</a></li>
+        <li><a href="./assignment.html">ASSIGNMENT</a></li>
+        <li><a href="./notes.html">NOTES</a></li>
+      </ul>
 
-    <ol>
-      <li><a href="./JSP/Index.html">Project 1</a></li>
-      <li><a href="./JSP2/index.html">Project 2</a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-    </ol>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div class="main-content">
+      <p class="heading">
+        my Projects
+      </p>
+
+      <ol>
+        <li><a href="./JSP/Index.html" class="project-list">Project 1</a></li>
+        <li><a href="./JSP2/index.html" class="project-list">Project 2</a></li>
+        <li><a href="#" class="project-list"></a></li>
+        <li><a href="#" class="project-list"></a></li>
+        <li><a href="#" class="project-list"></a></li>
+      </ol>
+    </div>
   </body>
 </html>
