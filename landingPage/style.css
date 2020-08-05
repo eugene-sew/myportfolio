@@ -1,0 +1,208 @@
+:root {
+  --modal-duration: 1s;
+  --primary-color: rgb(90, 0, 90);
+  --secondary-color: rgb(0, 230, 247);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgb(109, 60, 109);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  /* take nav off screen with -100*/
+  transform: translateX(-100%);
+}
+body.show-nav {
+  transform: translateX(200px);
+}
+
+nav.logo {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+img {
+  width: 120px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 2px solid red;
+  padding: 20px 70px;
+}
+
+nav ul li:first-of-type {
+  border-top: 2px solid red;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: rgb(67, 202, 255);
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  background-color: white;
+  color: black;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 120%;
+  position: relative;
+  padding-left: 40px 15px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: rgb(211, 210, 210);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.modal-container {
+  background-color: rgba(12, 74, 87, 0.404);
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(36, 34, 34, 0.541);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid rgb(0, 255, 255);
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-content p {
+  align-items: center;
+}
+
+.modal-form {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  float: right;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

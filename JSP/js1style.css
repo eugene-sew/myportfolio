@@ -16,6 +16,21 @@ body {
   min-height: 100vh;
 }
 
+.home {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30px 50px;
+}
+
+.fa-home {
+  font-size: 50px;
+  border: none;
+  color: white;
+}
+
 header {
   font-size: 1.5rem;
 }
@@ -87,8 +102,15 @@ form button:hover {
   pointer-events: none;
 }
 
-
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 668px) {
+  .home {
+    position: relative;
+    padding: 20px;
+    margin: 0 10px;
+  }
 }

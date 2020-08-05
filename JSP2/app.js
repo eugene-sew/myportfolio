@@ -39,14 +39,14 @@ function createCard(data, index) {
             <div class="inner-card-front">
             <p>
             ${data.question}
-            </p >
+            </p>
             </div>
-            <div>
+            <div class="inner-card-back">
             <p>
             ${data.answer}
             </p>
             </div>
-    </div >`;
+    </div>`;
 
   card.addEventListener("click", () => card.classList.toggle("show-answer"));
 
@@ -69,10 +69,15 @@ function getCardsData() {
 }
 
 //add card to local storage
-function setCardsData() {
+function setCardsData(cards) {
   localStorage.setItem("cards", JSON.stringify(cards));
   window.location.reload();
 }
+
+// function setCardsData(cards) {
+//   localStorage.setItem("cards", JSON.stringify(cards));
+//   window.location.reload();
+// }
 
 createCards();
 
@@ -150,4 +155,3 @@ clearBtn.addEventListener("click", () => {
   cardsContainer.innerHTML = "";
   window.location.reload();
 });
-

@@ -43,7 +43,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 30%;
 }
 
 .nav-links li {
@@ -81,9 +81,9 @@ nav {
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
-  /* test it with: body{
-        display:none;
-    } */
+  /* body {
+    display: none;
+  } */
 
   body {
     overflow-x: hidden;
@@ -112,12 +112,16 @@ nav {
     display: block;
   }
 
+  .content {
+    /* position: absolute; */
+  }
+
   .intro {
     margin-bottom: 40px;
   }
 
   button {
-    margin-top: 120px;
+    margin-top: 50px;
   }
 
   .about-text-box {
